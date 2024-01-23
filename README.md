@@ -1,5 +1,5 @@
 # What are AppControls
-AppControls are UPV that were introduced with Version 7.0.
+AppControls are an enhancment to UPV that was introduced with Version 7.0.
 They allow UPV users, powerusers and administrators to extend the functionality of UPV.
 AppControls in UPV are run inside a browser inside UPV allowing to display their own UI inside UPV.
 Comunication with UPV is possible using an api provided from CAXperts. It is available from npm [@caxperts/universal.api](https://www.npmjs.com/package/@caxperts/universal.api)
