@@ -1,8 +1,8 @@
 # Security
-We use a whitelist to ensure only AppControls in this list can be displayed and access the model.
+We use a allowlist to ensure only AppControls in this list can be displayed and access the model.
 The file is saved as an appcontrol.json file in the Data folder of the model.
-## Whitelist
-Each whitelist entry has the following setting
+## Allowlist
+Each allowlist entry has the following setting
 ```
 Host = The host allowed. This can also be used to allow subdomains
 Scheme = https|http|file
@@ -11,7 +11,7 @@ AllowOfflineAppControl = Are offline AppControls allowed. These are stored in th
 Url=A direct URL that is available
 Api=Does this entry have access to the api.
 ```
-If an url is not allowed users will be redirected to the blocked url. Make sure to only whitelist trusted websites.
+If an url is not allowed users will be redirected to the blocked url. Make sure to only allowlist trusted websites.
 
 ## Settings
 ```
@@ -25,13 +25,12 @@ WindowsCachePath=Redirect the cookie and localstorage path
 ## Example full config
 ```json
 {
-    "Type": "whitelist",
     "Version": 1,
     "Redirect": {
         "Default": "https://caxperts.com",
         "Blocked": "https://caxperts.com"
     },
-    "Whitelist": [
+    "Allowlist": [
         {
             "Host": "*.universalplantviewer.com",
             "Scheme": "https",
