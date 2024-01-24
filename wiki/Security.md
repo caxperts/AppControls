@@ -38,7 +38,7 @@ WindowsCachePath=Redirect the cookie and localstorage path
         },
         {
             "Host": "localhost",
-            "Scheme": "https",
+            "Scheme": "http",
             "Api": true
         },
         {
