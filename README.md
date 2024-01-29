@@ -12,3 +12,4 @@ Offline AppControls empower UPV to seamlessly utilize AppControls even in the ab
 * [HowToSetup](wiki/HowToSetup.md)
 * [Q&A](wiki/Q&A.md)
 * [Security](wiki/Security.md)
+* [User Guide](https://www.caxperts.com/help/UniversalPlantViewer%20App/AppControl)
