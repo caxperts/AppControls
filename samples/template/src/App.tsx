@@ -22,7 +22,7 @@ function App() {
             <Stack spacing={2} direction="row" alignSelf={'center'}>
               <AppControlActionButton action={Actions.OpenUrl}></AppControlActionButton>
               <AppControlActionButton action={Actions.HideSteel}></AppControlActionButton>
-              <AppControlActionButton action={Actions.HideSteel}></AppControlActionButton>
+              <AppControlActionButton action={Actions.Reset}></AppControlActionButton>
               <AppControlActionButton action={Actions.EricTest}></AppControlActionButton>
             </Stack>
             <CustomAttributePanel></CustomAttributePanel>
