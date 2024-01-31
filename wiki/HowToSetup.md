@@ -3,7 +3,7 @@
 - Install a code editor you are comfortable with. For example [Visual Studio Code](https://code.visualstudio.com/)
 - Run `npm create vite@latest <appname> -- --template react-ts`
 - Switch to the newly created folder. `cd <appname>`
-- Run `npm i @caxperts/universal.api` to install the apy
+- Run `npm i @caxperts/universal.api` to install the api
 # Adding Offline AppControl Support
 - Run `npm install vite-plugin-singlefile --save-dev`
 - Set vite.config.ts to
