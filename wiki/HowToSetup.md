@@ -39,3 +39,26 @@ If you are recieving errors that the AppControl was blocked please refer to [Sec
 
 # How to debug
 On Windows an AppControl can be debugged using the Chrome Debugger. Ensure that `RemoteDebugging` is enabled in the AppControls security settings. In the current version this is enabled by default. By visiting `http://localhost:8080` you can access the chrome debugger and start debugging the AppControl running inside UPV.
+
+# Styling
+We provide a Material UI theme definition to get a simelar style to UPV itself.
+This is located in [Theme.ts](../samples/template/src/Theme.ts) and can be used by setting it as the theme via
+```tsx
+import CssBaseline from '@mui/material/CssBaseline';
+import { themeOptions } from './Theme';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+function App() {
+  const darkTheme = createTheme(themeOptions);
+
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <Your Content>
+    </ThemeProvider>
+  );
+}
+
+export default App;
+```
+In future version the theme its planned to implement the theme via the api.
