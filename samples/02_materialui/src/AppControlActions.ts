@@ -24,13 +24,38 @@ export async function execute(action: Actions) {
             break;
         case Actions.EricTest:
             // Testing functions for eric
-            let filter2 = (await Application.getInstance().Scenes3d.get())[0].getNewFilter();
-            filter2.Condition = "Area System=Sulphur Recovery Area-A";
-            await filter2.color("#FF0000");
+            let scene = (await Application.getInstance().Scenes3d.get())[0]
+            
+            let filter3 = scene.getNewFilter()
+            filter3.Condition = "Name=P-1011"
+            filter3.color("#FF0000")
+            /*break;
+            let scene = (await Application.getInstance().Scenes3d.get())[0]
+            Application.getInstance().Events.registerSelectionChangedEvent(async (data) => {
+                let filter2 = scene.getNewFilter()
+                if(data.Objects.length == 0){
+                    filter2.Condition = "Uid=*"
+                    filter2.clearColor()
+                }else{
+                    
+                    filter2.IncludeAttributes = true
+                    let response = await filter2.getSelectedObjects()
+                    
+                    filter2.Condition= "Name="+response[0].getAttribute("Name")
+                    filter2.color("#FF0000")
+                }
 
-            filter2.Condition = "Area System=Sulphur Recovery Area-B";
-            await filter2.color("#00FF00");
+                
+            });
 
+            
+            let filter2 = scene.getNewFilter()
+            filter2.IncludeAttributes = true
+            let response = await filter2.getSelectedObjects()
+            
+            filter2.Condition= "Name="+response[0].getAttribute("Name")
+            filter2.clearColor()
+*/
             break;
         default:
             break;

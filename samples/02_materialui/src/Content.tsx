@@ -10,8 +10,8 @@ function Content() {
             {/* Define a stack to place the Header and buttons underneath each other */}
             <Stack spacing={2} direction="column">
                 {/* Center the header. This is possible with multiple ways but this is an easy variant */}
-                <Typography align='center'>
-                    <h1>React Material Sample</h1>
+                <Typography align='center' variant='h4'>
+                    AppControl Button Template
                 </Typography>
                 {/* Stack inside the stack that contains all buttons. They are centered in side the stack */}
                 <Stack spacing={2} direction="row" alignSelf={'center'}>

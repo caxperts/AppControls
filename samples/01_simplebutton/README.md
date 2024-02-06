@@ -6,4 +6,4 @@ npm install
 npm run dev
 ```
 
-Have a look at [App.tsx](src/App.tsx) for documentation on how this works
+Have a look at [App.tsx](src/App.tsx) for implementation on how this works
