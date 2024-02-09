@@ -1,6 +1,6 @@
 # Security
 We use a allowlist to ensure only AppControls in this list can be displayed and access the model.
-The file is saved as an appcontrol.json file in the Data folder of the model.
+The file is saved as an appcontrols.json file in the Data folder of the model.
 ## Allowlist
 Each allowlist entry has the following setting
 ```
@@ -22,7 +22,7 @@ RemoteDebugging=Can you use remote debugging to debug the appcontrol (default fa
 WindowsCachePath=Redirect the cookie and localstorage path
 ```
 
-## Example full config
+## Example appcontrols.json
 ```json
 {
     "Version": 1,
