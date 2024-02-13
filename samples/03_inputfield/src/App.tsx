@@ -1,21 +1,38 @@
 import CssBaseline from '@mui/material/CssBaseline';
-import { themeOptions } from './Theme';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeOptions, ThemeProvider, createTheme } from '@mui/material/styles';
 import Content from './Content';
+import { useEffect, useState } from 'react';
+import { CircularProgress } from '@mui/material';
+import { Theme } from '@caxperts/universal.api'
 
 
 function App() {
-  // create a theme based on the themeOptions provided. themeOptions will move in the Universal.Api in a futur version
-  const darkTheme = createTheme(themeOptions);
+
+  const [themeData, setThemeData] = useState<ThemeOptions | null>(null);
+
+  useEffect(() => {
+    async function load() {
+      setThemeData(createTheme(await Theme.getTheme()))
+    }
+    load();
+  }, [])
+
+
   return (
     <>
-      {/* Set the Theme and add the CSSBaseline to add fulll MUI support */}
-      <ThemeProvider theme={darkTheme}>
-        <CssBaseline />
-        {/* The main content of my AppControl */}
-        <Content />
+      {themeData == null ? (
+        <CircularProgress />
+      ) : (
+          < ThemeProvider theme={themeData}>
+            {/* Set the Theme and add the CSSBaseline to add full MUI support */}
+            <CssBaseline />
+            {/* The main content of my AppControl */}
+            <Content />
 
-      </ThemeProvider>
+          </ThemeProvider >
+        )
+
+      }
     </>
   );
 }
