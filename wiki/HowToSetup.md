@@ -38,7 +38,7 @@ Running `npm run build` will generate the build. The result is saved inside the 
 If you are recieving errors that the AppControl was blocked please refer to [Security.md](Security.md) and ensure that the site is allowed. For offline AppControls this requires the `AllowOfflineAppControl` setting.
 
 # How to debug
-On Windows an AppControl can be debugged using the Chrome Debugger. Ensure that `RemoteDebugging` is enabled in the AppControls security settings. In the current version this is enabled by default. By visiting `http://localhost:8080` you can access the chrome debugger and start debugging the AppControl running inside UPV.
+On Windows an AppControl can be debugged using the Chrome Debugger. Ensure that `RemoteDebugging` is enabled in the AppControls security settings. By visiting `http://localhost:8080` you can access the chrome debugger and start debugging the AppControl running inside UPV.
 
 # Styling
 We provide a Material UI theme definition to get a simelar style to UPV itself. The theme is available via our API. Use this App.tsx to get started.

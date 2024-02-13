@@ -17,8 +17,8 @@ If an url is not allowed users will be redirected to the blocked url. Make sure 
 ```
 UserAgent=UserAgent that should be used
 IgnoreCertificateErrors=Are certificates ignored (default false)
-StorageEnabled=Are cookies and localstorage saved (default false on BBV else on)
-RemoteDebugging=Can you use remote debugging to debug the appcontrol (default false on BBV else on)
+StorageEnabled=Are cookies and localstorage saved (default true; blocked on BBV)
+RemoteDebugging=Can you use remote debugging to debug the appcontrol (default false; blocked on BBV)
 WindowsCachePath=Redirect the cookie and localstorage path
 ```
 
