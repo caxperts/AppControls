@@ -41,24 +41,46 @@ If you are recieving errors that the AppControl was blocked please refer to [Sec
 On Windows an AppControl can be debugged using the Chrome Debugger. Ensure that `RemoteDebugging` is enabled in the AppControls security settings. In the current version this is enabled by default. By visiting `http://localhost:8080` you can access the chrome debugger and start debugging the AppControl running inside UPV.
 
 # Styling
-We provide a Material UI theme definition to get a simelar style to UPV itself.
-This is located in [Theme.ts](../samples/template/src/Theme.ts) and can be used by setting it as the theme via
+We provide a Material UI theme definition to get a simelar style to UPV itself. The theme is available via our API. Use this App.tsx to get started.
 ```tsx
 import CssBaseline from '@mui/material/CssBaseline';
-import { themeOptions } from './Theme';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeOptions, ThemeProvider, createTheme } from '@mui/material/styles';
+import Content from './Content';
+import { useEffect, useState } from 'react';
+import { CircularProgress } from '@mui/material';
+import { Theme } from '@caxperts/universal.api'
+
 
 function App() {
-  const darkTheme = createTheme(themeOptions);
+
+  const [themeData, setThemeData] = useState<ThemeOptions | null>(null);
+
+  useEffect(() => {
+    async function load() {
+      setThemeData(createTheme(await Theme.getTheme()))
+    }
+    load();
+  }, [])
+
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <Your Content>
-    </ThemeProvider>
+    <>
+      {themeData == null ? (
+        <CircularProgress />
+      ) : (
+          < ThemeProvider theme={themeData}>
+            {/* Set the Theme and add the CSSBaseline to add full MUI support */}
+            <CssBaseline />
+            {/* The main content of my AppControl */}
+            <Content />
+
+          </ThemeProvider >
+        )
+
+      }
+    </>
   );
 }
 
 export default App;
 ```
-In future version the theme its planned to implement the theme via the api.
