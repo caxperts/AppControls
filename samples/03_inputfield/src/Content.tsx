@@ -48,7 +48,7 @@ function Content() {
                 {/* Define the MUI Textfield. A defaultvalue can be set using the defaultValue parameter. We also link the reference we created earlier */}
                 <TextField variant='filled' defaultValue={"Name=D-240"} inputRef={conditionRef} label='Condition' />
                 { /* Create a Textfield that acts as a select element. There is also a Select MUi element that allows more customisation */}
-                <TextField label='Action' variant='filled' select inputRef={actionRef}>
+                <TextField label='Action' variant='filled' defaultValue={"Select"} select inputRef={actionRef}>
                     {/* Create 3 Menuitems for the actions we want to perform */}
                     <MenuItem value="Select">Select</MenuItem>
                     <MenuItem value="Fit">Fit</MenuItem>

@@ -1,5 +1,5 @@
-# Inputfields and Dropdowns
-This is a example for inputfields and dropdowns.
+# Events
+This is a example for events.
 To run it excute the following functions
 ```bash
 npm install

@@ -4,6 +4,7 @@
 - Run `npm create vite@latest <appname> -- --template react-ts`
 - Switch to the newly created folder. `cd <appname>`
 - Run `npm i @caxperts/universal.api` to install the api
+- Checkout the Samples to find usage examples for the API
 # Adding Offline AppControl Support
 - Run `npm install vite-plugin-singlefile --save-dev`
 - Set vite.config.ts to
@@ -41,7 +42,10 @@ If you are recieving errors that the AppControl was blocked please refer to [Sec
 On Windows an AppControl can be debugged using the Chrome Debugger. Ensure that `RemoteDebugging` is enabled in the AppControls security settings. By visiting `http://localhost:8080` you can access the chrome debugger and start debugging the AppControl running inside UPV.
 
 # Styling
-We provide a Material UI theme definition to get a simelar style to UPV itself. The theme is available via our API. Use this App.tsx to get started.
+- We provide a Material UI theme definition to get a simelar style to UPV itself. The theme is available via our API. 
+- Run `npm install @mui/material @emotion/styled @emotion/react` to install the components required
+- Make sure to add `<meta name="transparent" content="true">` to the meta tags of the index.html file
+- Use this App.tsx to get started
 ```tsx
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeOptions, ThemeProvider, createTheme } from '@mui/material/styles';
