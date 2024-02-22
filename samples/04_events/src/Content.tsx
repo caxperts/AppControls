@@ -30,14 +30,23 @@ function Content() {
 
     //Use useEffect to register/deregister the event when the component loads/unloads
     useEffect( () => {
+        //Obtain a reference to the Events system
+        let events = Application.getInstance().Events;
+        //use the useEffectWrapper to register for an event (in this case registerSelectionChangedEvent) and supply a callback
+        //the return value of useEffectWrapper is a function that will remove the event again. This is needed for react to ensure on rerender only one event is registered
+        return events.useEffectWrapper(events.registerSelectionChangedEvent, callback)
+
+        /* Its also possible to not use the wrapper with the following code but its easier to use the wrapper
         //Register callback changed event the returned value is a promise that will in future contain the event id used for cleanup
         let response = Application.getInstance().Events.registerSelectionChangedEvent(callback);
 
         //if the content is un/reloaded make sure to remove the event before creating the new one by returning a cleanup function
         return () => {
-            // if the initializing was not completed yet wait till it was completed and then remove the event.
+        // if the initializing was not completed yet wait till it was completed and then remove the event.
             response.then(Application.getInstance().Events.removeEvent)
         };
+        */
+
     });
 
     return (
