@@ -7,26 +7,29 @@ export enum Actions {
 
 export async function execute(action: Actions) {
     switch (action) {
-        case Actions.OpenUrl:
+        case Actions.OpenUrl: {
             console.log("Opening Google")
             // Opeing a webpage outside of UPV
             await Application.getInstance().openPath("https://www.google.com");
             break;
-        case Actions.HideSteel:
+        }
+        case Actions.HideSteel: {
             //Hide steel element by setting the visibility to false for all Elements that have Task=Structure
-            let filter = (await Application.getInstance().Scenes3d.get())[0].getNewFilter();
+            const filter = (await Application.getInstance().Scenes3d.get())[0].getNewFilter();
             filter.Condition = "Task=Structure";
             await filter.setVisibility(false);
             break;
-        case Actions.Reset:
+        }
+        case Actions.Reset: {
             //Can the Camera reset funtion. This will not only reset the camera but also reset the model to the initial state
             await (await Application.getInstance().Scenes3d.get())[0].Camera.resetView();
             break;
-        case Actions.EricTest:
+        }
+        case Actions.EricTest: {
             // Testing functions for eric
-            let scene = (await Application.getInstance().Scenes3d.get())[0]
+            const scene = (await Application.getInstance().Scenes3d.get())[0]
             
-            let filter3 = scene.getNewFilter()
+            const filter3 = scene.getNewFilter()
             filter3.Condition = "Name=P-1011"
             filter3.color("#FF0000")
             /*break;
@@ -57,6 +60,7 @@ export async function execute(action: Actions) {
             filter2.clearColor()
 */
             break;
+        }
         default:
             break;
     }

@@ -7,18 +7,18 @@ import { Application } from '@caxperts/universal.api';
 function Content() {
 
     // We define a reference to a HTMLInputElement. This will be later bound and used to access the value of the input field
-    let conditionRef = useRef<HTMLInputElement>()
-    let actionRef = useRef<HTMLSelectElement>()
+    const conditionRef = useRef<HTMLInputElement>()
+    const actionRef = useRef<HTMLSelectElement>()
 
     async function execute() {
         // Check if we are running inside UPV
-        let runningInUPV = Application.getInstance().available()
+        const runningInUPV = Application.getInstance().available()
         console.log(runningInUPV)
 
         // get a 3D scene element
-        let scene = (await Application.getInstance().Scenes3d.get())[0]
+        const scene = (await Application.getInstance().Scenes3d.get())[0]
         // get a new filter
-        let filter = scene.getNewFilter();
+        const filter = scene.getNewFilter();
         // Set the condition of the filter based on the value of the text field
         filter.Condition = conditionRef.current?.value;
 

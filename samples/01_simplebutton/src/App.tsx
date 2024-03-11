@@ -12,7 +12,7 @@ function App() {
   async function color() {
     // Scenes3d references to all 3D scenes. In future this will query UPVs window managment. all .get() funtions are async and need to be awaited.
     // Filters are our main interaction point between AppCOntrols and the API. using getNewFilter a new one can be generated.
-    let filter = (await Application.getInstance().Scenes3d.get())[0].getNewFilter();
+    const filter = (await Application.getInstance().Scenes3d.get())[0].getNewFilter();
     // A filter condition can be set on the filter that is based on the structure Key=Value. * is a supported wildcard. 
     // You can also combine multiple condition using the & sign. Example: Key1=Value1&Key2=Value2
     filter.Condition = "Task=Equipment";
