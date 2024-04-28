@@ -1,5 +1,6 @@
 # Samples
 These samples should help getting started with AppControls.
+For prebuild offline AppControls of the samples take a look at the [releases](https://github.com/caxperts/AppControls/releases)
 
 [01_simplebutton](01_simplebutton/README.md) contains a simple hello world AppControl.
 
