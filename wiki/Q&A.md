@@ -9,3 +9,5 @@ There is a detection in place if the website has a color set as a background. Th
 ```html
 <meta name="transparent" content="true">
 ```
+## When loading my offline AppControl the screen stays grey.
+There is a file size limit of 2mb. Please ensure that you AppControl is less then 2MB. If you include data used by the appcontrol try to load it afterwards via (APICommand still missing) or switch to a regular AppControl

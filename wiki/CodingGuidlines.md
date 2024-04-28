@@ -10,4 +10,7 @@ The utilization of React as the prescribed framework is paramount to maintain co
 React also allows us to fairly simply create offline AppControls. Where possible use the new [signals](https://preactjs.com/guide/v10/signals/) system for cleaner code.
 
 ## Backend
-If a backend is required use ASP.NET or ASP.NET Core (prefered). 
+If a backend is required C# or Node is prefered. Single solutions like NextJS that are used for frontend and backend are approved.
+
+## Database
+Use an ORM system like Prisma (Node) or Entity Framework (Core) (C#) to ensure easier database deployment and being interoperable with multiple databases. 
