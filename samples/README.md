@@ -11,3 +11,5 @@ For prebuild offline AppControls of the samples take a look at the [releases](ht
 [04_events](04_events/README.md) contains a sample that uses the event system to color selected elements Red
 
 [05_externaldata](05_externaldata/README.md) contains a sample that displays external and internal data using table and tab controls. It also uses the event system to recieve selection changed events and update the data.
+
+[06_clientserver](06_clientserver/README.md) contains a sample that connectes to a database via an Api server.

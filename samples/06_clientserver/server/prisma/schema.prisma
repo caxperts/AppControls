@@ -1,0 +1,21 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // switch to the database provider that should be used
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// model inside the database
+// use npx prisma db push to push changes to the database
+// use npx prisma generate to generate the js client libary
+model ElementStatus {
+  elementName String @id
+  elementType String //used to create conditions
+  currentElementStatus String
+}
