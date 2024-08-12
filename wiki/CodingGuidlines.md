@@ -7,7 +7,7 @@ While the UniversalApi doesnt follow the Typescript guidelines by having the fie
 
 ## Framework
 The utilization of React as the prescribed framework is paramount to maintain consistency and streamline development practices. React's component-based architecture and declarative syntax provide a powerful foundation for building interactive and responsive user interfaces.
-React also allows us to fairly simply create offline AppControls. Where possible use the new [signals](https://preactjs.com/guide/v10/signals/) system for cleaner code.
+React also allows us to fairly simply create offline AppControls.
 
 ## Backend
 If a backend is required C# or Node is prefered. Single solutions like NextJS that are used for frontend and backend are approved.
