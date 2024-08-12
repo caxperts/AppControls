@@ -9,7 +9,7 @@ Offline AppControls empower UPV to seamlessly utilize AppControls even in the ab
 
 # Testing AppControls
 AppControls can be tested inside UPV via the [AppControls Playground](https://playground.universalplantviewer.com) which contains an Code Editor to edit the samples provided.
-The Playground is only fully compatible with UPV 7.1.0 and higher (UPV 7.1.0 is not yet released, till then only Sample 1-3 work)
+The Playground is only fully compatible with UPV 7.1.0 and higher
 
 # More information
 * [CodingGuidlines](wiki/CodingGuidlines.md)

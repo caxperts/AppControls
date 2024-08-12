@@ -19,7 +19,8 @@ UserAgent=UserAgent that should be used
 IgnoreCertificateErrors=Are certificates ignored (default false)
 StorageEnabled=Are cookies and localstorage saved (default true; blocked on BBV)
 RemoteDebugging=Can you use remote debugging to debug the appcontrol (default false; blocked on BBV)
-WindowsCachePath=Redirect the cookie and localstorage path
+RemoteDebuggingPort=Can specify which port to use on windows for debugging (default 8080)
+WindowsCachePath=Redirect the cookie and localstorage path (Currently ignored by UPV)
 ```
 
 ## Example appcontrols.json
@@ -28,7 +29,7 @@ WindowsCachePath=Redirect the cookie and localstorage path
     "Version": 1,
     "Redirect": {
         "Default": "https://caxperts.com",
-        "Blocked": "https://caxperts.com"
+        "Blocked": "https://caxperts.com/blocked/"
     },
     "Allowlist": [
         {
