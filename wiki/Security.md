@@ -27,10 +27,6 @@ WindowsCachePath=Redirect the cookie and localstorage path (Currently ignored by
 ```json
 {
     "Version": 1,
-    "Redirect": {
-        "Default": "https://caxperts.com",
-        "Blocked": "https://caxperts.com/blocked/"
-    },
     "Allowlist": [
         {
             "Host": "*.universalplantviewer.com",
