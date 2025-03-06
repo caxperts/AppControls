@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniversalPlantViewer Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container p {
+            margin: 10px 0;
+        }
+        .container a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .container a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>UniversalPlantViewer login was successful.<br>You can close this window now.</p>
+        <p>If there was a problem, you can reissue the login request with the link below:</p>
+        <a id="#authLink">Login</a>
+    </div>
+</body>
+
+<script>
+		var url = 'upvapi://auth' + window.location.search;
+
+		function login(){
+			window.location.assign(url);
+		}
+
+		window.onload = function() {
+			var link = document.getElementById('#authLink');
+
+			link.href = url;
+
+			login();
+		}
+</script>
+
+</html>
