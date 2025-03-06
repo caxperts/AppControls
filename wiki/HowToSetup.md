@@ -55,7 +55,7 @@ import { CircularProgress } from '@mui/material';
 import { Theme } from '@caxperts/universal.api'
 
 
-function App() {
+export default function App() {
 
   const [themeData, setThemeData] = useState<ThemeOptions | null>(null);
 
@@ -85,6 +85,4 @@ function App() {
     </>
   );
 }
-
-export default App;
 ```
