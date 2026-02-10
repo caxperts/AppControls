@@ -39,7 +39,15 @@ Running `npm run build` will generate the build. The result is saved inside the 
 If you are recieving errors that the AppControl was blocked please refer to [Security.md](Security.md) and ensure that the site is allowed. For offline AppControls this requires the `AllowOfflineAppControl` setting.
 
 # How to debug
-On Windows an AppControl can be debugged using the Chrome Debugger. Ensure that `RemoteDebugging` is enabled in the AppControls security settings. By visiting `http://localhost:8080` you can access the chrome debugger and start debugging the AppControl running inside UPV.
+Starting with UDiTH (and UPV 7.5.1) Remote debugging has changed and is now available via Edge or Chrome Remote Dev tools. These are available via edge/chrome://inspect and search for local network debugging targets.
+
+With this change the `RemoteDebuggingPort` was changed to 9222 which is the default port for chrome and edge.
+
+```
+OLD, Only use for UPV before 7.5.1
+On Windows an AppControl can be debugged using the Chrome Debugger. Ensure that `RemoteDebugging` is enabled in the AppControls security settings. By visiting `http://localhost:8080` you can access the chrome debugger and start debugging the AppControl running inside UPV. A diffrent port can be specified via `RemoteDebuggingPort` which is by default set to 8080.
+```
+
 
 # Styling
 - We provide a Material UI theme definition to get a simelar style to UPV itself. The theme is available via our API. 
