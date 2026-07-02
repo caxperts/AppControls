@@ -5,8 +5,17 @@ node_modules
 .pnp
 .pnp.js
 
+# lockfiles (not committed; Dependabot reads from package.json)
+package-lock.json
+npm-shrinkwrap.json
+yarn.lock
+pnpm-lock.yaml
+
 # testing
 coverage
+
+# build info
+*.tsbuildinfo
 
 # production
 build
