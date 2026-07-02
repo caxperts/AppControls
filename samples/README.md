@@ -13,6 +13,9 @@ For prebuild offline AppControls of the samples take a look at the [releases](ht
 [05_externaldata](05_externaldata/README.md) contains a sample that displays external and internal data using table and tab controls. It also uses the event system to recieve selection changed events and update the data.
 
 [06_clientserver](06_clientserver/README.md) contains a sample that connectes to a database via an Api server.
+
 [07_authentication](07_authentication//README.md) contains a sample of Authentication.
 
 [08_picturetaker](08_picturetaker//README.md) an example of a tool to take modelshots and store them in Zip or PDF files
+
+[09_windowlayouts](09_windowlayouts/README.md) contains a sample that reads and modifies the UPV window layout (JSON and XML) to move the App panel below the 3D view.
