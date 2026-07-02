@@ -3,8 +3,8 @@ import { Button, Stack, TextField } from "@mui/material";
 import { useState } from "react";
 import { utils, read } from "xlsx";
 import { IFileSaver, TakenImage } from "./savers/IFileSaver";
-import { ZipFileSaver as ZipFileSaver } from "./savers/ZipSaver";
-import { PdfFileSaver as PdfFileSaver } from "./savers/PdfSaver";
+import { ZipFileSaver as _ZipFileSaver } from "./savers/ZipSaver";
+import { PdfFileSaver as _PdfFileSaver } from "./savers/PdfSaver";
 
 const CONFIG = {
     DELAY_TIME: 2000,
@@ -121,8 +121,8 @@ export default function Content() {
 
     return <>
     <Stack direction={"row"}>
-        <Button variant="contained" onClick={() => process(new PdfFileSaver())}>Generate PDF</Button>
-        <Button variant="contained" onClick={() => process(new ZipFileSaver())}>Generate Zip</Button>
+        <Button variant="contained" onClick={() => process(new _PdfFileSaver())}>Generate Pdf</Button>
+        <Button variant="contained" onClick={() => process(new _ZipFileSaver())}>Generate Zip</Button>
     </Stack>
         <br/>
         <TextField multiline value={log} />
