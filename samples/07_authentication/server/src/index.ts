@@ -6,7 +6,7 @@ import { JwtHeader, JwtPayload, SigningKeyCallback, verify } from 'jsonwebtoken'
 import { JwksClient } from 'jwks-rsa';
 
 //the issuer we trust (IDP). Either read it from the .env file or fall back to the sample value
-const issuer = process.env.issuer || "https://auth.universalplantviewer.com/realms/sample_authentication"
+const issuer = process.env.issuer || "https://auth-portal.udith.io/realms/sample_authentication"
 //the audience we trust (IDP client). Either read it from the .env file or fall back to the sample value.
 //for the sample connector this has been set to the same name by default
 const audience = process.env.audience || "sample-connector"

@@ -47,8 +47,9 @@ export default function Content() {
     }
     
     async function logout() {
-        //This only closes the context. With 7.2 a new api will become available to perform a hard logout
-        context?.closeAuthenticationContext()
+        context?.startLogoutProcess();
+        //Only close the context. Dont log out
+        //context?.closeAuthenticationContext();
         //Reset the context and the token
         setContext(undefined)
         setToken(undefined)
@@ -84,8 +85,7 @@ export default function Content() {
             </Typography>
             <Typography align='center'>
                 This example demonstrates SSO authentication via OIDC
-                To login press the login button and enter either user and the password "password" without the quotes
-                In 7.1 of UPV the logout just terminates the context. With 7.2 a new API is introduced to perform a logout against the IDP
+                To login press the login button and enter either "user" or "admin" and the password "password" without the quotes
             </Typography>
             <Stack direction="row">
                 <Button variant="contained" onClick={login}>Login</Button>
